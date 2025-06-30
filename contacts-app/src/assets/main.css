@@ -1,0 +1,567 @@
+@import './base.css';
+@import 'tailwindcss';
+
+#app {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+.navItem {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  padding-left: 70px;
+  font-family: 'Roboto';
+}
+
+.notification {
+  display: block;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  border-left: 23px solid grey;
+  background-color: white;
+}
+
+.success {
+  border-left: 23px solid green;
+  color: green;
+}
+
+.fail {
+  border-left: 23px solid #a61a11;
+  color: #a61a11;
+}
+
+.notificationContainer {
+  position: fixed;
+  right: 10px;
+  top: 120px;
+  width: 510px;
+  height: auto;
+  display: grid;
+  z-index: 99999;
+}
+
+.button {
+  display: block;
+  border-radius: 5px;
+  align-items: center;
+  justify-items: center;
+  width: 75px;
+  height: 60px;
+  margin-left: 20px;
+  background-color: #0054a6;
+  font-weight: bold;
+  color: white;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.oval {
+  border-radius: 50%;
+  width: 65px;
+  height: 55px;
+  align-items: center;
+  justify-items: center;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.circle {
+  width: 58px;
+  height: 58px;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.blue {
+  background-color: #0054a6;
+}
+
+body {
+  display: block;
+  background-color: #ffffff;
+}
+
+.contactItemCard {
+  display: grid;
+  align-items: start;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 350px;
+  max-height: 350px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-left: 50px;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.contactItemCard:hover {
+  background-color: ghostwhite;
+}
+
+.contactCardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin: 0px;
+  font-family: 'Roboto';
+}
+
+.contactCardBody {
+  display: block;
+  font-family: 'Roboto';
+}
+
+.contactsTable {
+  width: 1650px;
+  display: table;
+  border-radius: 2px;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+}
+
+.contactsTable th {
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto';
+}
+
+.contactsTable td {
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: 'Roboto';
+}
+
+.contactsTable tr:not(:first-child):hover {
+  background-color: ghostwhite;
+}
+
+.contactDetails {
+  display: flex;
+  padding: 30px;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.contactDetailsColumn {
+  flex: 50%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.pagination {
+  display: block;
+  border-radius: 5px;
+  height: auto;
+  background-color: #0054a6;
+  font-weight: bold;
+  color: white;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 275px;
+  padding: 5px 10px;
+}
+
+.dropdown {
+  position: absolute;
+  width: 75px;
+  z-index: 1;
+  margin-left: 20px;
+}
+.dropdown p {
+  text-align: center;
+  background-color: #0054a6;
+  color: white;
+  display: block;
+  margin-bottom: 1px;
+  border-radius: 5px;
+}
+.dropdown p:hover {
+  background-color: cornflowerblue;
+}
+.search {
+  background-color: #eeeeee;
+  background-image: url('@/assets/images/searchIcon.png');
+  background-position: 18px 17px;
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 50px;
+  height: 56px;
+  width: 575px;
+  border-radius: 5px 5px 0px 0px;
+  font-family: 'Roboto';
+}
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter select {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 300px;
+  padding-bottom: 2px;
+}
+
+.singleFilter {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.blueBackground {
+  display: flex;
+  background-color: #1f3f77;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigBox {
+  z-index: 1000;
+  height: 850px;
+  width: 770px;
+  background-color: white;
+  padding: 50px;
+  padding-top: 100px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.backContainer {
+  position: absolute;
+  z-index: 1000;
+  left: 100px;
+  top: 100px;
+}
+
+.bigBox input {
+  background-color: #eeeeee;
+  padding: 12px 40px 12px 50px;
+  height: 56px;
+  width: 450px;
+  border-radius: 5px 5px 0px 0px;
+  font-family: 'Roboto';
+}
+
+.email {
+  background-color: #eeeeee;
+  background-image: url('@/assets/images/emailIcon.png');
+  background-repeat: no-repeat;
+  background-size: 30px 24px;
+  background-position: 10px;
+}
+
+.password {
+  background-color: #eeeeee;
+  background-image: url('@/assets/images/passwordIcon.png');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 15px;
+}
+
+.showIcon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.loginButton {
+  display: block;
+  border-radius: 5px;
+  align-items: center;
+  justify-items: center;
+  width: 275px;
+  height: 40px;
+  margin-left: 20px;
+  background-color: #0054a6;
+  font-weight: 500;
+  color: white;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.delete {
+  background-color: #a61a11;
+}
+
+.edit {
+  background-color: #0054a6;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+}
+
+.modal {
+  margin: auto;
+  width: fit-content;
+  min-width: 35rem;
+  background-color: white;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+.modal-body {
+  display: block;
+}
+
+.dataTable {
+  width: 1650px;
+  display: table;
+  text-align: left;
+  padding: 30px;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.dataTable thead {
+  background-color: #eeeeee;
+  font-size: 16px;
+}
+
+.dataTable th {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+
+.dataTable td {
+  padding-left: 30px;
+  padding-top: 20px;
+  font-size: larger;
+}
+
+.dataTable tr:last-child td {
+  padding-bottom: 20px;
+}
+
+.blueTableButton {
+  background-color: #0054a6;
+  color: white;
+  width: 275px;
+  height: 45px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+
+.deleteTableButton {
+  background-color: #a61a11;
+  color: white;
+  width: 130px;
+  height: 45px;
+  border-radius: 30px;
+}
+
+.tab {
+  width: 180px;
+  height: 56px;
+  text-align: center;
+  background-color: #0054a6;
+  border-radius: 15px;
+  color: white;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.formRow {
+  display: flex;
+}
+
+.formColumn {
+  flex: 50%;
+  margin-left: 50px;
+}
+
+.contactInput {
+  width: 430px;
+  height: 55px;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.contactBlock {
+  height: 100px;
+  display: block;
+}
+
+.iconPadding {
+  padding-left: 50px;
+}
+
+.phoneInput {
+  background-color: #eeeeee;
+  background-image: url('@/assets/images/phoneIcon.png');
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 16px;
+}
+
+.contactSelect {
+  background-color: white;
+  width: 380px;
+  height: 55px;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.addPhotoButton {
+  display: block;
+  color: white;
+  background-color: #0054a6;
+  width: 350px;
+  height: 40px;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.addButton {
+  color: white;
+  background-color: #0054a6;
+  width: 275px;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.yes {
+  font-size: 18px;
+  padding: 10px;
+  color: #0054a6;
+}
+
+.no {
+  font-size: 18px;
+  padding: 10px;
+  color: #0054a6;
+}
+
+.multipleSelect {
+  height: 250px;
+  width: 300px;
+  border: none;
+  padding-right: 10px;
+  overflow-y: scroll;
+}
+
+.selectOption {
+  background-color: #eeeeee;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.selectOption.selected {
+  background-color: #0054a6;
+  color: black;
+}
+
+.checkbox {
+  margin-right: 15px;
+  width: 16px;
+  height: 16px;
+}
+
+.checkboxLabel {
+  font-size: large;
+}
+
+.oneCheckbox {
+  padding-bottom: 15px;
+}
+
+.fit {
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.active {
+  border: #0054a6 solid 2px;
+  background-color: white;
+  color: #0054a6;
+}
+
+.tab {
+  width: 180px;
+  height: 56px;
+  text-align: center;
+  background-color: #0054a6;
+  border-radius: 15px;
+  color: white;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.active {
+  border: #0054a6 solid 2px;
+  background-color: white;
+  color: #0054a6;
+}
